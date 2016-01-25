@@ -4,7 +4,7 @@
   <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style.css" media="screen" title="no title" charset="utf-8">
 </head>
-<body>
+<body id="target">
   <header>
         <h1><a href=".">JavaScript</a></h1>
   </header>
@@ -15,6 +15,14 @@
       <li><a href="./page_op.html">연산자</a></li>
     </ol>
   </nav>
+  <div id="control">
+  <input type="button" name="name"
+  onclick="document.getElementById('target').className = 'white'"
+  value="white">
+  <input type="button" name="name"
+  onclick="document.getElementById('target').className = 'black'"
+  value="black">
+  </div>
   <article>
     <h2>연산자</h2>
     계산을 할 때 사용되는 것입니다.

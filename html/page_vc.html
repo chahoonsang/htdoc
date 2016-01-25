@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="../css/style.css" media="screen" title="no title" charset="utf-8">
 </head>
-<body>
+<body id="target">
   <header>
         <h1><a href=".">JavaScript</a></h1>
   </header>
@@ -15,6 +15,16 @@
       <li><a href="./page_op.html">연산자</a></li>
     </ol>
   </nav>
+
+  <div id="control">
+  <input type="button" name="name"
+  onclick="document.getElementById('target').className = 'white'"
+  value="white">
+  <input type="button" name="name"
+  onclick="document.getElementById('target').className = 'black'"
+  value="black">
+  </div>
+
   <article>
     <h2>변수와 상수</h2>
       변수란

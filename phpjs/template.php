@@ -11,7 +11,7 @@
     </script>
     <h1>PHP</h1>
     <?php
-
+    header("pragma: no-cache");
      ?>
   </body>
 </html>

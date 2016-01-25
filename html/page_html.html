@@ -4,7 +4,7 @@
   <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style.css" media="screen" title="no title" charset="utf-8">
 </head>
-<body>
+<body id="target">
   <header>
         <h1><a href=".">JavaScript</a></h1>
   </header>
@@ -15,10 +15,25 @@
       <li><a href="./page_op.html">연산자</a></li>
     </ol>
   </nav>
+  <div id="control">
+  <input type="button" name="name" id="white_btn" value="white">
+  <input type="button" name="name" id="black_btn" value="black">
+  </div>
   <article>
     <h2>JavaScript란?</h2>
     JavaScript는 웹페이지를 프로그래밍적으로 제어하는 언어입니다.22ㅇㅇㅇㅇㄷㄷㄷㄷ
     이상해
   </article>
+
+<script type="text/javascript">
+wbtn = document.getElementById('white_btn');
+bbtn = document.getElementById('black_btn');
+wbtn.addEventListener('click', function(){
+  document.getElementById('target').ClassName='white';
+});
+bbtn.addEventListener('click', function(){
+  document.getElementById('target').ClassName='black';
+});
+</script>
 </body>
 </html>
