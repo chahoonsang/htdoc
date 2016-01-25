@@ -6,25 +6,9 @@ body.white {
   background-color:white;
   color:black;
 }
-header{
-  border-bottom:1px solid gray;
+#logo{
+  width:100px;
+}
+.container{
   padding:20px;
-}
-nav {
-  border-right:1px solid gray;
-  width:200px;
-  height:600px;
-  float:left;
-}
-nav ol{
-  list-style:none;
-  padding-left: 0;
-}
-article{
-  float:left;
-  padding:20px;
-  width: 500px;
-}
-#control {
-  float:right;
 }

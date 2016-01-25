@@ -1,11 +1,21 @@
 <?php
-$title =  htmlspecialchars($_POST['title']);
-$author = htmlspecialchars($_POST['author']);
-$desc =  htmlspecialchars($_POST['description']);
-$conn = mysqli_connect('localhost','root','lovesoeun111');
-$password = "12345";
-$user_id = "";
-mysqli_select_db($conn, 'opentutorials');
+require("../lib/db.php");
+require("../config/config.php");
+
+
+$host=$config['host'];
+$duser=$config['duser'];
+$dpw=$config['dpw'];
+$dname=$config['dname'];
+
+$conn = db_init($host, $duser, $dpw, $dname);
+var_dump($conn);
+
+$title =  mysqli_real_escape_string($conn, $_POST['title']);
+$author = mysqli_real_escape_string($conn, $_POST['author']);
+$desc =  mysqli_real_escape_string($conn, $_POST['description']);
+
+
 $sql = "SELECT * FROM user WHERE name='".$author."'";
 $result = mysqli_query($conn, $sql);
 if($result->num_rows ==0){
@@ -22,7 +32,7 @@ if($result->num_rows ==0){
 
 //exit;
 $sql = "INSERT INTO topic(title, description, author, created) VALUES('".$title."','".$desc."','".$user_id."',now())";
-//echo $sql;
+echo $sql;
 $result = mysqli_query($conn, $sql);
 header('Location:./index.php');
 ?>
